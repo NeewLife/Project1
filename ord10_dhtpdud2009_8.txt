@@ -1,0 +1,11 @@
+function PreloadFiles takes nothing returns nothing
+
+	call Preload( " 닉네임 dhtpdud2009" )
+	call Preload( " 클리어 회수 = 8" )
+	call Preload( " 누적 플레이 포인트 = 141점" )
+	call Preload( "-load cq7F8fy0Fbu" )
+	call PreloadEnd( 0.0 )
+
+endfunction
+
+

@@ -16,7 +16,7 @@ body {
 .header-time{
   top: 53px;
   left: 104px;
-  position: fixed;
+  position: absolute;
   display: inline-block;
 }
 
@@ -24,8 +24,8 @@ body {
   font-size: 25px;
   
   top: 40px;
-  right: 45%;
-  position: fixed;
+  right: 40%;
+  position: absolute;
   text-align: center;
   display: inline-block;
 }
@@ -38,7 +38,7 @@ button{
   border: 1px solid white;
   border-radius: 50px;
   display: inline-block;
-  position: fixed;
+  position: absolute;
   top: 39px;
   right: 32px;
   height: 41px;
@@ -46,18 +46,21 @@ button{
 }
 
 .main{
+  background-color: cornflowerblue;
+  width: 80%;
+  position: relative;
+  left: 10%;
+  top: 200px;
   font-family: 'Playfair Display', serif;
   font-family: 'Rock Salt', cursive;
   font-size: 80px;
-  padding-top: 15%;
-  padding-left: 18%;
-  padding-right: 10%;
   
 }
 
 .main-chat {
-  top: 25%;
-  left: 250px;
+  width: auto;
+  height: auto;
+  position: absolute;
   display: inline-block;
   background-color: #495950;
   padding-left: 45px;
@@ -65,16 +68,14 @@ button{
   padding-top: 20px;
   padding-bottom: 20px;
   border-radius: 100px;
-  transform-origin: center center;
-  transition: .8s;
 }
 
 .main-resttime{
+  width: auto;
+  height: auto;
   font-size: 60px;
   line-height: 1.4;
-  top: 28%;
-  right: 225px;
-  position: fixed;
+  position: absolute;
   display: inline-block;
   transform: rotate(17deg);
   background-color: #114469;
@@ -82,19 +83,14 @@ button{
   padding-right: 120px;
   padding-top: 30px;
   padding-bottom: 30px;
-  text-align: start;
   border-radius: 70px;
-  transform-origin: center center;
-  transition: 0.8s;
   
 }
 
 .main-credits{
   font-size: 50px;
-  vertical-align: top;
-  top: 55%;
-  position: fixed;
-  margin-left: 70px;
+  /* top: 55%; */
+  position: absolute;
   transform: rotate(-17deg);
   background-color: #fe9c3e;
   padding: 50px;
@@ -103,21 +99,17 @@ button{
   padding-inline-start: 20px;
   border-radius: 100%;
   align-items : center;
-  transform-origin: center center;
-  transition: 0.8s;
 }
 
 .main-noticeBoard{
   font-size: 60px;
   line-height: 1.4;
-  top: 58%;
-  right: 300px;
-  position: fixed;
+  /* top: 58%;
+  right: 300px; */
+  position: absolute;
   background-color: #db5551;
   padding: 30px;
   padding-top: 60px;
   padding-bottom: 60px;
   border-radius: 30px 100px 30px 30px;
-  transform-origin: center center;
-  transition: 0.8s;
 }
