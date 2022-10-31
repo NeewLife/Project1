@@ -24,7 +24,7 @@ body {
   font-size: 25px;
   
   top: 40px;
-  right: 40%;
+  right: 41vw;
   position: absolute;
   text-align: center;
   display: inline-block;
@@ -63,6 +63,9 @@ button{
   position: absolute;
   display: inline-block;
   background-color: #495950;
+  top: 5vh;
+  left: 41vw;
+  margin-left: -450px;
   padding-left: 45px;
   padding-right: 140px;
   padding-top: 20px;
@@ -79,6 +82,8 @@ button{
   display: inline-block;
   transform: rotate(17deg);
   background-color: #114469;
+  top: 5vh;
+  left: 41vw;
   padding-left: 45px;
   padding-right: 120px;
   padding-top: 30px;
@@ -93,6 +98,10 @@ button{
   position: absolute;
   transform: rotate(-17deg);
   background-color: #fe9c3e;
+  top: 5vh;
+  left: 41vw;
+  margin-top: 250px;
+  margin-left: -350px;
   padding: 50px;
   padding-top: 110px;
   padding-bottom: 110px;
@@ -104,10 +113,12 @@ button{
 .main-noticeBoard{
   font-size: 60px;
   line-height: 1.4;
-  /* top: 58%;
-  right: 300px; */
   position: absolute;
   background-color: #db5551;
+  top: 5vh;
+  left: 41vw;
+  margin-top: 250px;
+  margin-left: 10px;
   padding: 30px;
   padding-top: 60px;
   padding-bottom: 60px;
