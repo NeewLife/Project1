@@ -23,7 +23,6 @@ body {
 
 .header-logo{
   font-size: 25px;
-  
   top: 40px;
   right: 43vw;
   position: absolute;
@@ -149,8 +148,6 @@ button{
   }
 }
 
-
-
 .main-resttime{
   width: auto;
   height: auto;
@@ -202,7 +199,7 @@ button{
   animation: move3 1.5s;
   animation-timing-function: cubic-bezier(1, 0.8, 0.8);
   animation-delay: 0.3s;
-  
+
   &:hover{
     transform: scale(1.1) rotate(-27deg);
     transition: 0.2s;

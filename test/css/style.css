@@ -44,6 +44,21 @@ button {
   width: 128px;
 }
 
+@-webkit-keyframes move1 {
+  0% {
+    opacity: 0;
+    transform: translateX(100px) translateY(100px) scale(0.3);
+  }
+  50% {
+    opacity: 0.85;
+    transform: translateX(-50px) translateY(-50px) scale(1.2) rotate(-10deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
 @keyframes move1 {
   0% {
     opacity: 0;
@@ -56,6 +71,21 @@ button {
   100% {
     opacity: 1;
     transform: translateY(0) scale(1);
+  }
+}
+@-webkit-keyframes move2 {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px) translateY(100px) scale(0.3);
+    visibility: visible;
+  }
+  50% {
+    opacity: 0.85;
+    transform: translateX(50px) translateY(-50px) scale(1.2) rotate(27deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(17deg);
   }
 }
 @keyframes move2 {
@@ -73,6 +103,19 @@ button {
     transform: translateY(0) scale(1) rotate(17deg);
   }
 }
+@-webkit-keyframes move3 {
+  0% {
+    opacity: 0;
+    transform: translateX(120px) translateY(-80px) scale(0.3);
+  }
+  50% {
+    opacity: 0.85;
+    transform: translateX(-50px) translateY(50px) scale(1.15) rotate(-27deg);
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes move3 {
   0% {
     opacity: 0;
@@ -83,6 +126,19 @@ button {
     transform: translateX(-50px) translateY(50px) scale(1.15) rotate(-27deg);
   }
   100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes move4 {
+  0% {
+    opacity: 0;
+    transform: translateX(-120px) translateY(-120px) scale(0.3);
+  }
+  50% {
+    opacity: 0.85;
+    transform: translateX(50px) translateY(50px) scale(1.15) rotate(10deg);
+  }
+  to {
     opacity: 1;
   }
 }
@@ -100,7 +156,7 @@ button {
   }
 }
 .main {
-
+  background-color: cornflowerblue;
   width: 80%;
   position: relative;
   left: 10%;
@@ -124,8 +180,10 @@ button {
   padding-top: 20px;
   padding-bottom: 20px;
   border-radius: 100px;
-  animation: move1 1.5s;
-  animation-timing-function: cubic-bezier(1, 0.8, 0.8);
+  -webkit-animation: move1 1.5s;
+          animation: move1 1.5s;
+  -webkit-animation-timing-function: cubic-bezier(1, 0.8, 0.8);
+          animation-timing-function: cubic-bezier(1, 0.8, 0.8);
 }
 .main-chat:hover {
   transform: scale(1.15) rotate(-10deg);
@@ -153,9 +211,12 @@ button {
   padding-bottom: 30px;
   border-radius: 70px;
   opacity: 0;
-  animation: move2 1.5s;
-  animation-timing-function: cubic-bezier(1, 0.8, 0.8);
-  animation-delay: 0.2s;
+  -webkit-animation: move2 1.5s;
+          animation: move2 1.5s;
+  -webkit-animation-timing-function: cubic-bezier(1, 0.8, 0.8);
+          animation-timing-function: cubic-bezier(1, 0.8, 0.8);
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
 }
 .main-resttime:hover {
   transform: scale(1.15) rotate(27deg);
@@ -179,13 +240,17 @@ button {
   padding: 65px;
   padding-top: 110px;
   padding-bottom: 110px;
-  padding-inline-start: 20px;
+  -webkit-padding-start: 20px;
+          padding-inline-start: 20px;
   border-radius: 100%;
   align-items: center;
   opacity: 0;
-  animation: move3 1.5s;
-  animation-timing-function: cubic-bezier(1, 0.8, 0.8);
-  animation-delay: 0.3s;
+  -webkit-animation: move3 1.5s;
+          animation: move3 1.5s;
+  -webkit-animation-timing-function: cubic-bezier(1, 0.8, 0.8);
+          animation-timing-function: cubic-bezier(1, 0.8, 0.8);
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }
 .main-credits:hover {
   transform: scale(1.1) rotate(-27deg);
@@ -210,8 +275,10 @@ button {
   padding-bottom: 60px;
   border-radius: 30px 100px 30px 30px;
   opacity: 0;
-  animation: move4 1.5s;
-  animation-delay: 0.4s;
+  -webkit-animation: move4 1.5s;
+          animation: move4 1.5s;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
 }
 .main-noticeBoard:hover {
   transform: scale(1.1) rotate(10deg);
@@ -220,6 +287,4 @@ button {
 .main-noticeBoard:not(:hover) {
   transform: scale(1);
   transition: 0.2s;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
