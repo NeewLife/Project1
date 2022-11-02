@@ -1,3 +1,20 @@
+function Clock (){
+    var today = new Date();
+
+    var year = today.getFullYear();
+    var month = ('0' + (today.getMonth() + 1)).slice(-2);
+    var day = ('0' + today.getDate()).slice(-2);
+    var hours = ('0' + today.getHours()).slice(-2); 
+    var minutes = ('0' + today.getMinutes()).slice(-2);
+    var seconds = ('0' + today.getSeconds()).slice(-2); 
+
+    var dateString = year + '-' + month  + '-' + day;
+    var timeString = hours + ':' + minutes  + ':' + seconds;
+    document.getElementById("header-time").innerHTML = dateString + " | " + timeString;
+}
+Clock();
+setInterval(Clock, 1000);
+
 var chatAni = document.querySelector('.main-chat');
 var restAni = document.querySelector(".main-resttime");
 var creditAni = document.querySelector(".main-credits");
@@ -16,25 +33,51 @@ noticeAni.addEventListener("animationstart", function(e) {
     noticeAni.style.opacity = "1";
 }, false);
 
-console.log(chatAni.style);
-console.log(chatAni.style.animationDuration);
+function buttonClose(){
+    chatAni.style.animationName = 'scale-out-chat';
+    chatAni.style.animationFillMode = 'forwards';
+    restAni.style.animationName = 'scale-out-rest';
+    restAni.style.animationFillMode = 'forwards';
+    creditAni.style.animationName = 'scale-out-credits';
+    creditAni.style.animationFillMode = 'forwards';
+    noticeAni.style.animationName = 'scale-out-notice';
+    noticeAni.style.animationFillMode = 'forwards';
+}
 
 chatAni.addEventListener("click", function(){
-    chatAni.style.removeProperty('animation', 'move1')
-    chatAni.style.animationDuration = "";
-    chatAni.style.animationName = "move1";
-    chatAni.style.animationDuration = "1s";
-    console.log(chatAni.style.animationName);
-    console.log(chatAni.style.animationDuration);
+    buttonClose();
+    // setTimeout(function(){
+    //     window.location.href = './post/Chat.html';
+    // }, 1800);
+     var layerClass = ".right-layer";
+     var layers = document.querySelectorAll(layerClass);
+     setTimeout(function(){
+        for (const layer of layers) {
+            layer.classList.toggle("active");
+          }
+        }, 1800);
+     
+    }
+)
+
+restAni.addEventListener("click", function(){
+    buttonClose();
+    setTimeout(function(){
+        window.location.href = './post/RestTime.html';
+    }, 1800);
 })
 
-// function goChat() {
-//     chatAni.style.animationName = "move1";
-//     chatAni.style.animationDuration = "1s";
-    
-    
+creditAni.addEventListener("click", function(){
+    buttonClose();
+    setTimeout(function(){
+        window.location.href = './post/Credits.html';
+    }, 1800);
+})
 
-//     // setTimeout(function(){
-//     //     window.location.href = './post/Chat.html';
-//     // }, 1800);
-// }
+noticeAni.addEventListener("click", function(){
+    buttonClose();
+    setTimeout(function(){
+        window.location.href = './post/NoticeBoard.html';
+    }, 1800);
+})
+
